@@ -1,0 +1,55 @@
+{% extends 'employees/index.html' %}
+
+{% block title %} Add Employee {% endblock %}
+
+{% block content %}
+
+<div class="container mt-5">
+    <div class="col-md-6 offset-md-3">
+
+        <h2 class="text-center mb-4">Add New Employee</h2>
+
+        <form method="POST" class="shadow p-4 rounded bg-dark">
+            {% csrf_token %}
+
+            <div class="mb-3">
+                <label class="form-label">Izina Ribanza</label>
+                <input type="text" name="first_name" class="form-control" placeholder="Izina ribanza" required>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Izina Riheruka</label>
+                <input type="text" name="last_name" class="form-control" placeholder="Izina riheruka" required>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Numero ya Telefone</label>
+                <input type="text" name="telefone" class="form-control" placeholder="Telefone">
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Icyo akora</label>
+                <input type="text" name="akazi" class="form-control" placeholder="Akazi" required>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Itariki</label>
+                <input type="date" name="itariki" class="form-control" required>
+            </div>
+
+            <div class="d-flex justify-content-between">
+                <a href="{% url 'home' %}" class="btn btn-secondary">
+                    Subira ahabanza
+                </a>
+
+                <button type="submit" class="btn btn-success">
+                    Save Employee
+                </button>
+            </div>
+
+        </form>
+
+    </div>
+</div>
+
+{% endblock %}

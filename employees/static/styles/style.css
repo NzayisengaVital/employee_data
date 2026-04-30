@@ -1,0 +1,26 @@
+/* DARK MODE */
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.dark-mode .container {
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+
+.dark-mode table {
+    color: #ffffff;
+}
+
+.dark-mode .table {
+    background-color: #1e1e1e;
+}
+
+.dark-mode .navbar {
+    background-color: #000 !important;
+}
+
+.dark-mode a {
+    color: #90caf9;
+}

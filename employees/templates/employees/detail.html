@@ -1,0 +1,58 @@
+{% extends 'employees/index.html' %}
+
+{% block title %} Details {% endblock %}
+
+{% block content %}
+
+<div class="container mt-4">
+
+    <h2 class="text-center mb-4">Ibyerekeye umukozi</h2>
+
+    <table class="table table-bordered table-striped table-hover shadow">
+        <thead class="table-dark">
+            <tr>
+                <th>Amazina</th>
+                <th>Umushahara</th>
+                <th>Akazi</th>
+                <th>Itariki</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            {% for x in mydetails %}
+            <tr>
+                <td>
+                    <strong>
+                        {{ x.umukozi.first_name }} {{ x.umukozi.last_name }}
+                    </strong>
+                </td>
+
+                <td>
+                    <span class="badge bg-success fs-6">
+                        {{ x.umushahara }}
+                    </span>
+                </td>
+                <td>
+                    <span class="badge bg-success fs-6">
+                        {{ x.umukozi.akazi }}
+                    </span>
+                </td>
+
+                <td>
+                    {{ x.igihe|date:"Y-m-d" }}
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <!-- Back button -->
+    <div class="text-center mt-4">
+        <a href="{% url 'home' %}" class="btn btn-secondary">
+            Subira ahabanza
+        </a>
+    </div>
+
+</div>
+
+{% endblock %}
