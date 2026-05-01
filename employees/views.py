@@ -32,9 +32,9 @@ def detail(request, id):
     details = Umushahara.objects.filter(umukozi_id = id)
     return render(request, 'employees/detail.html', {'mydetails':details})
 
-def injira(request):
+#def injira(request):
     return render(request, 'employees/injira.html')
-def user_login(request):
+#def user_login(request):
 
     if request.method == 'POST':
         username = request.POST.get('username')
